@@ -7,7 +7,7 @@ Time-based Blind SQL Injection is a technique where the attacker determines if a
 ### Testing URL Parameters
 
 #### Example URL
-`http://192.168.1.2/webpentest/sqli/blind-injection-time-based.php`
+`http://192.168.1.2/blind-injection-time-based.php`
 
 
 #### SQL Injection Payloads
