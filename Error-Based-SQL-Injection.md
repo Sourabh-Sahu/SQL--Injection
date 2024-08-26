@@ -179,6 +179,3 @@ SELECT * FROM users WHERE id='1'
 **Explanation:**
 The `error-based-string-post.php` file is also vulnerable to SQL Injection. The query `SELECT * FROM users WHERE id='1'` is used with user-provided input, which can be manipulated by attackers. By injecting payloads such as `1' UNION ALL SELECT CURRENT_USER(), 2, 3, 4, 5 --`, attackers can execute additional SQL commands to combine query results. This approach allows them to bypass the filter and access sensitive information, including the current database user, schema details, table names, column names, and user passwords. The `GROUP_CONCAT` function in payloads like `1' UNION ALL SELECT GROUP_CONCAT(name), GROUP_CONCAT(password), 3, 4, 5 FROM employe_db.users --+` enables attackers to gather all usernames and passwords into a single result, facilitating data extraction from the `employe_db` database.
 
----
-
-These explanations provide a detailed view of how each SQL Injection example operates, highlighting the impact and techniques used in each case.
